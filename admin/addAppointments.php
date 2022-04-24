@@ -18,7 +18,13 @@ while($staffRow = $staffResult->fetch_assoc()){
     echo "<option value=\"$staffId\">$staffFirstName $staffLastName</option>";
 }
     ?>
-
-</select>
-
+  
+</select><br>
+<label for="startTime">Data początkowa</label>
+<input type="datetime-local" name="startTime" id="startTime"><br>
+<label for="endTime">Data Końcowa</label>
+<input type="datetime-local" name="endTime" id="endTime"><br>
+<label for="interval">Interwał (min)</label>
+<input type="number" name="interval" id="interval" value="15"><br>
+<input type="submit" value="Rozpisz wizytę">
 </form>
